@@ -67,7 +67,7 @@ class ProtocolHandlerFactory{
 }
 
 //High level module should not directly depend on low level module, use abstraction
-public class D_DependencyInversionPrinciple {
+public class E_DependencyInversionPrinciple {
 	
 	public static void main(String[] args) {
 		 MyMessage2 myMessage2 = new MyMessage2("TCP");

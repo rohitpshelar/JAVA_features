@@ -39,6 +39,6 @@ class Celibration implements VegRestaurant, NonVegRestaurant{
 }
 
 // A Client should not be forced to implement an interface that it does not use
-public class I_InterfaceSegregationPrinciple {
+public class D_InterfaceSegregationPrinciple {
 
 }
