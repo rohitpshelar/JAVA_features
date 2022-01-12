@@ -1,9 +1,9 @@
-package java8.eight.solidPrincipiles.OCP;
+package java8.solidPrincipiles.B_OpenClosedPrinclipe;
 
 // open for extension and closed for modification
 
 class Arraylist{
-	public static void sort(int a[]) {
+	public final static void sort(int a[]) {
 		for (int i = 0; i < a.length; i++) {
 			for (int j = i+1; j < a.length; j++) {
 				if(a[i] > a[j]) {
@@ -75,7 +75,8 @@ class DescComparator implements RohitComparator{
 	}
 }
 
-public class OpenClosedPrinciple {
+// Object or entities should be open for extension but closed for modification
+public class B_OpenClosedPrinclipe {
 	public static void main(String[] args) {
 		int arr[] = {4,1,6,2,3,5};
 		//Arraylist2.sort(arr,new AscComparator());

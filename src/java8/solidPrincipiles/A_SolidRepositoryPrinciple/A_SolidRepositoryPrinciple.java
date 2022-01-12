@@ -1,4 +1,4 @@
-package java8.eight.solidPrincipiles.SRP;
+package java8.solidPrincipiles.A_SolidRepositoryPrinciple;
 
 // Solid Repository Principle
 class Account {
@@ -30,7 +30,8 @@ class NotificationService {
 	}
 }
 
-public class SRP {
+//A class should have one and only one reason to change - 
+public class A_SolidRepositoryPrinciple{
 	AccountRepository accountRepository = new AccountRepository();
 	NotificationService notificationService = new NotificationService();
 
