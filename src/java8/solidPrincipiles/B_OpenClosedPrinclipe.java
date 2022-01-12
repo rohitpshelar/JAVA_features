@@ -1,4 +1,4 @@
-package java8.solidPrincipiles.B_OpenClosedPrinclipe;
+package java8.solidPrincipiles;
 
 // open for extension and closed for modification
 

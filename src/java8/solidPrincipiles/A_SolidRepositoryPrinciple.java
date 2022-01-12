@@ -1,4 +1,4 @@
-package java8.solidPrincipiles.A_SolidRepositoryPrinciple;
+package java8.solidPrincipiles;
 
 // Solid Repository Principle
 class Account {

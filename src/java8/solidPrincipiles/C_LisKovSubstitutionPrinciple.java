@@ -1,4 +1,4 @@
-package java8.solidPrincipiles.C_LisKovSubstitutionPrinciple;
+package java8.solidPrincipiles;
 
 class Vechile{
 	public void start() {
