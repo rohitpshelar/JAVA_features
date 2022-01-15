@@ -1,4 +1,4 @@
-package java8.solidPrincipiles;
+package java8.SolidPrincipiles;
 
 class Vechile{
 	public void start() {

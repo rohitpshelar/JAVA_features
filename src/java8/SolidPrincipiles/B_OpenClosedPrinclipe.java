@@ -1,4 +1,4 @@
-package java8.solidPrincipiles;
+package java8.SolidPrincipiles;
 
 // open for extension and closed for modification
 

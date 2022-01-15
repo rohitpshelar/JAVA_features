@@ -1,4 +1,4 @@
-package java8.solidPrincipiles;
+package java8.SolidPrincipiles;
 
 //class MyMessage{
 //	TCPProtocolHandler tcpProtocolHandler = new TCPProtocolHandler();

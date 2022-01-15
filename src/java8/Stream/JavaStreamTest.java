@@ -45,8 +45,7 @@ public class JavaStreamTest {
 		System.out.println(IntStream.range(1, 10).sum());
 		System.out.println("=2=");
 		IntStream.range(1, 1000).filter(e -> e%3==0).filter(e -> e%5==0).filter(e -> e%10!=0).forEach(e -> System.out.print(e+","));
-		
-		
+				
 		//String
 		System.out.println("=3=");
 		System.out.println(Stream.of("Rohit","Shelar","AA").sorted().count());

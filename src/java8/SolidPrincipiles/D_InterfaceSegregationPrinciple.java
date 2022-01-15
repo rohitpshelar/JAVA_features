@@ -1,4 +1,4 @@
-package java8.solidPrincipiles;
+package java8.SolidPrincipiles;
 
 interface Restaurant{
 	void vegMeal();
