@@ -16,7 +16,8 @@ public class AtomicIntegerClass {
 		
 		atomicInteger.incrementAndGet();
 		System.out.println("2= "+atomicInteger.get());
-		Thread.currentThread().sleep(1);
+
+		Thread.sleep(1);
 	
 		new Thread() {
 			public void run() {
