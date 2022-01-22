@@ -1,11 +1,14 @@
 package java8.Stream;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Deque;
 import java.util.List;
 import java.util.ListIterator;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -98,8 +101,43 @@ public class JavaStreamTest {
 			for (Integer integer : list) {
 				System.out.println(integer);
 			}
-		
+			
+			
+			getSpecificElement();
 	}
 	
+	private static void getSpecificElement() {
+		
+		List<emp> empList = new ArrayList<emp>();
+		empList.add(new emp(1, "Rohit", 90000));
+		empList.add(new emp(2, "Don", 1000));
+		empList.add(new emp(3, "Samit", 110000));
+		empList.add(new emp(4, "Janu", 50000));
+		
+		empList.stream().sorted(Comparator.reverseOrder()).skip(2).limit(1).forEach(e -> System.out.println(e.name));
+	}
+	
+	
 
+}
+
+class emp implements Comparable<emp> {
+	Integer id;
+	String name;
+	Integer salary;
+	public emp(Integer id, String name, Integer salary) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+	}
+	@Override
+	public int compareTo(emp o) {
+		return this.salary.compareTo(o.salary);
+	}
+	
+	
+	
+	
+	
 }
