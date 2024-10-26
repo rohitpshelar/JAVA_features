@@ -6,6 +6,7 @@ public class CharCountString {
 	static String output = new String();
 
 	public static <R> void main(String[] args) {
+		
 		String s = "sssspppqqrrrrrss";
 		Object[] ints = s.chars().mapToObj(i -> (char) i).toArray();
 		// char[] ch = s.toCharArray(); not working
