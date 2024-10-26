@@ -3,7 +3,7 @@
 
 for freelance work? do reach, [email](mailto:rohitpshelar@gmail.com) :)
 
-[![trophy](https://github-profile-trophy.vercel.app/?username=kittinan&theme=onedark)](https://github.com/ryo-ma/github-profile-trophy)
+[![trophy](https://github-profile-trophy.vercel.app/?username=rohitpshelar&theme=onedark)](https://github.com/ryo-ma/github-profile-trophy)
 
 if you like what i do, maybe consider buying me a coffee/tea 🥺👉👈
 
