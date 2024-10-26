@@ -16,12 +16,9 @@ if you like what i do, maybe consider buying me a coffee/tea 🥺👉👈
 
 <a href="https://www.buymeacoffee.com/rohitpshelar" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-red.png" alt="Buy Me A Coffee" width="150" ></a>
 
-🚧 **my todoist stats:**
+🚧 **my stats:**
 <!-- TODO-IST:START -->
-🏆  8,004 Karma Points           
-🌸  Completed 0 tasks today           
-✅  Completed 673 tasks so far           
-⏳  Longest streak is 10 days
+[![GitHub Streak](https://streak-stats.demolab.com/?user=rohitpshelar&theme=chartreuse-dark)](https://git.io/streak-stats)
 <!-- TODO-IST:END -->
 
 
@@ -29,7 +26,10 @@ if you like what i do, maybe consider buying me a coffee/tea 🥺👉👈
 
 <p align="center"> <img src="https://github-readme-stats.vercel.app/api?username=rohitpshelar&show_icons=true&theme=gotham" alt="rohitpshelar" />
 
+<p align="center">
 <a href="https://github.com/rohitpshelar/JAVA_features">
   <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=rohitpshelar&repo=JAVA_features&theme=buefy" />
 </a>
+
+
 
