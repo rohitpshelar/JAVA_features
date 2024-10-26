@@ -21,6 +21,9 @@ if you like what i do, maybe consider buying me a coffee/tea 🥺👉👈
 [![GitHub Streak](https://streak-stats.demolab.com/?user=rohitpshelar&theme=chartreuse-dark)](https://git.io/streak-stats)
 <!-- TODO-IST:END -->
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=rohitpshelar/JAVA_features&type=Timeline)](https://star-history.com/#rohitpshelar/JAVA_features&Timeline)
 
 📈 my github stats
 
