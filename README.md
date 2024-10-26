@@ -1,3 +1,6 @@
+<h1 align="center">Hi 👋, I'm Rohit Shelar</h1>
+<h3 align="center">A passionate Java developer from India</h3>
+
 for freelance work? do reach, [email](mailto:rohitpshelar@gmail.com) :)
 
 📊 **this week i spent my time on:**
@@ -25,3 +28,8 @@ if you like what i do, maybe consider buying me a coffee/tea 🥺👉👈
 📈 my github stats
 
 <p align="center"> <img src="https://github-readme-stats.vercel.app/api?username=rohitpshelar&show_icons=true&theme=gotham" alt="rohitpshelar" />
+
+<a href="https://github.com/rohitpshelar/JAVA_features">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=rohitpshelar&repo=JAVA_features&theme=buefy" />
+</a>
+
