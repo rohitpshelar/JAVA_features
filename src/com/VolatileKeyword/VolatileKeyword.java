@@ -28,7 +28,7 @@ public class VolatileKeyword {
 			};
 		}.start();
 		
-		Thread.sleep(1);
+		Thread.sleep(8);
 	
 		new Thread() {
 			public void run() {
