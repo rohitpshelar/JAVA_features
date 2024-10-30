@@ -1,3 +1,4 @@
+package com.codility;
 
 public class FetchCapitalChar {
 	public static void main(String[] args) {

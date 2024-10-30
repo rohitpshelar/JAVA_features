@@ -12,8 +12,8 @@ class FirstNonRepetativeCharTest {
 
     private static Stream<Arguments> provideTestCases() {
         return Stream.of(
-                Arguments.of("abca", "b")
-//                Arguments.of("java", "j")
+//                Arguments.of("abcea", "b")
+                Arguments.of("jaeva", "j")
         );
     }
 

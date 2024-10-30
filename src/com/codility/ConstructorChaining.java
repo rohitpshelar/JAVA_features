@@ -1,3 +1,4 @@
+package com.codility;
 
 class A
 {

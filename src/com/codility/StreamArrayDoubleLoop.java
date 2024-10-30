@@ -1,3 +1,5 @@
+package com.codility;
+
 import java.util.stream.IntStream;
 
 public class StreamArrayDoubleLoop {
