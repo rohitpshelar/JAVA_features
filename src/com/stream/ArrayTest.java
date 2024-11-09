@@ -1,4 +1,4 @@
-package com.Stream;
+package com.stream;
 
 public class ArrayTest {
 	public static void main(String[] args) {
