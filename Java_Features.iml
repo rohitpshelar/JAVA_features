@@ -44,5 +44,12 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="logcaptor-2.9.3" level="project" />
+    <orderEntry type="library" name="assertj-core-3.26.3" level="project" />
+    <orderEntry type="library" name="logback-classic-1.5.12" level="project" />
+    <orderEntry type="library" name="logback-core-1.5.12" level="project" />
+    <orderEntry type="library" name="slf4j-reload4j-2.0.16" level="project" />
+    <orderEntry type="library" name="slf4j-simple-2.0.16" level="project" />
+    <orderEntry type="library" name="slf4j-api-2.0.16" level="project" />
   </component>
 </module>

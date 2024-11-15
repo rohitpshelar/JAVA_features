@@ -1,16 +1,19 @@
 package com.stream;
 
-public class StreamTest {
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
+public class StreamTest {
+    private static final  Logger logger = Logger.getLogger(StreamTest.class.getName());
 //    https://docs.google.com/forms/d/e/1FAIpQLSdkVpvXCBwes45F0-FykV0otYLcUa36MS9fGnntUJGjrs2D2Q/viewform
 //
 //    Q1.
-//    private void m1(String str){
-//        s.o.p("str");
-//    }
-//    private void m1(Object obj){
-//        s.o.p("obj");
-//    }
+public void m1(String str){
+        logger.log(Level.INFO, "str");
+    }
+    private void m1(Object obj){
+        logger.log(Level.INFO, "obj");
+    }
 //    p s v main(String[] args){
 //        m1(null);
 //    }
@@ -23,7 +26,7 @@ public class StreamTest {
 //    e) NullPointerException
 
 //    Q2.
-//    public class Test {
+//    
 //        public static void main(String[] args) {
 //            Stream<Integer> infiniteStream = Stream.iterate(1, i -> i + 1);
 //            int sum = infiniteStream.filter(i -> i % 2 == 0)
@@ -40,7 +43,7 @@ public class StreamTest {
 //    e) 30
 
 //    Q3.
-//    public class Test {
+//    
 //        public static void main(String[] args) {
 //            List<String> words = Arrays.asList("apple", "banana", "cherry", "date");
 //
@@ -62,7 +65,7 @@ public class StreamTest {
 //    d) Compile-time error
 
 //    Q4.
-//    public class Test {
+//    
 //        public static void main(String[] args) {
 //            List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
 //            int result = numbers.parallelStream()
@@ -77,7 +80,7 @@ public class StreamTest {
 //    d) 0
 
 //    Q5.
-//    public class Test {
+//    
 //        public static void main(String[] args) {
 //            Optional<String> name = Optional.of("John");
 //            Optional<String> upperName = name.map(String::toUpperCase);
@@ -94,7 +97,7 @@ public class StreamTest {
 //    d) Compile-time error
 
 //    Q6.
-//    public class Test {
+//    
 //        public static void main(String[] args) {
 //            List<String> fruits = Arrays.asList("apple", "banana", "cherry", "apple", "banana", "apple");
 //
@@ -112,7 +115,7 @@ public class StreamTest {
 //    d) {apple=2, banana=2, cherry=2}
 
 //    Q7.
-//    public class Test {
+//    
 //        public static void main(String[] args) {
 //            List<String> names = Arrays.asList("Tom", "Jerry", "Spike");
 //
@@ -132,7 +135,7 @@ public class StreamTest {
 //    d) Compile-time error
 
 //    Q8.
-//    public class Test {
+//    
 //        public static void main(String[] args) {
 //            ForkJoinPool forkJoinPool = new ForkJoinPool(2);
 //
@@ -150,7 +153,7 @@ public class StreamTest {
 //    d) Compile-time error
 
 //    Q9.
-//    public class Test {
+//    
 //        public static void main(String[] args) {
 //            List<Integer> numbers = Arrays.asList(3, 4, 5, 6, 7);
 //
@@ -168,7 +171,7 @@ public class StreamTest {
 //    d) true false true
 
 //    Q10.
-//    public class Test {
+//    
 //        public static void main(String[] args) throws Exception {
 //            CompletableFuture<String> future = CompletableFuture.supplyAsync(() -> "Hello");
 //            CompletableFuture<String> processedFuture = future.thenApply(str -> str + " World");
