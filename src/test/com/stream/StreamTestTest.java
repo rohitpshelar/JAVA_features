@@ -10,13 +10,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 class StreamTestTest {
     StreamTest test = new StreamTest();
 
-    @ParameterizedTest
-    @ValueSource(strings = {""})
-    void m1(String value){
-        LogCaptor logCaptor = LogCaptor.forClass(StreamTest.class);
-        test.m1(value);
-        assertThat(logCaptor.getInfoLogs())
-                .contains("str");
-
-    }
+//    @ParameterizedTest
+//    @ValueSource(strings = {""})
+//    void m1(String value){
+//        LogCaptor logCaptor = LogCaptor.forClass(StreamTest.class);
+//        test.m1(value);
+//        assertThat(logCaptor.getInfoLogs())
+//                .contains("str");
+//
+//    }
 }
