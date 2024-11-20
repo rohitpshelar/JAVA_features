@@ -1,19 +1,16 @@
 package com.stream;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 public class StreamTest {
-    private static final  Logger logger = Logger.getLogger(StreamTest.class.getName());
+//    private static final  Logger logger = Logger.getLogger(StreamTest.class.getName());
 //    https://docs.google.com/forms/d/e/1FAIpQLSdkVpvXCBwes45F0-FykV0otYLcUa36MS9fGnntUJGjrs2D2Q/viewform
 //
 //    Q1.
-public void m1(String str){
-        logger.log(Level.INFO, "str");
-    }
-    private void m1(Object obj){
-        logger.log(Level.INFO, "obj");
-    }
+//public void m1(String str){
+//        logger.log(Level.INFO, "str");
+//    }
+//    private void m1(Object obj){
+//        logger.log(Level.INFO, "obj");
+//    }
 //    p s v main(String[] args){
 //        m1(null);
 //    }
@@ -40,7 +37,7 @@ public void m1(String str){
 //    b) 6
 //    c) 20
 //    d) Compile-time error
-//    e) 30
+//    e) 30 -------------
 
 //    Q3.
 //    
@@ -60,7 +57,7 @@ public void m1(String str){
 //    }
 //    What will be the output of the above code?
 //    a) apple, banana, cherry, date
-//    b) apple banana cherry date
+//    b) apple banana cherry date -----------------------------
 //    c) applebanana cherrydate
 //    d) Compile-time error
 
@@ -74,7 +71,7 @@ public void m1(String str){
 //        }
 //    }
 //    What will be the output of the above code?
-//    a) 120
+//    a) 120 ------------------------------------------------------
 //    b) Undefined, due to parallel processing
 //    c) The result might vary, but it will always be greater than 5
 //    d) 0
@@ -91,7 +88,7 @@ public void m1(String str){
 //        }
 //    }
 //    What will be the output of the above code?
-//    a) JOHN
+//    a) JOHN  ---------------------------------------------
 //    b) Optional[JOHN]
 //    c) Not found
 //    d) Compile-time error
@@ -109,7 +106,7 @@ public void m1(String str){
 //        }
 //    }
 //    What will be the output of the above code?
-//    a) {banana=2, cherry=1, apple=3}
+//    a) {banana=2, cherry=1, apple=3}-------------
 //    b) {apple=1, banana=1, cherry=1}
 //    c) Compile-time error
 //    d) {apple=2, banana=2, cherry=2}
@@ -130,7 +127,7 @@ public void m1(String str){
 //    What will happen when this code is executed?
 //
 //    a) Max will be added to the list and it will print [Tom, Jerry, Spike, Max]
-//    b) A runtime error will occur due to an unsupported operation
+//    b) A runtime error will occur due to an unsupported operation ----------------
 //    c) The code will compile but not print anything
 //    d) Compile-time error
 
@@ -236,7 +233,7 @@ public void m1(String str){
 //    Input: nums = [3,2,3,1,2,4,5,5,6], k = 4
 //    Output: 4
 
-    public static void main(String[] args) {
-        System.out.println(" ");
-    }
+//    public static void main(String[] args) {
+//        System.out.println(" ");
+//    }
 }
