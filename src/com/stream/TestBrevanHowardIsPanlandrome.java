@@ -1,6 +1,6 @@
 package com.stream;
 
-public class TestHA {
+public class TestBrevanHowardIsPanlandrome {
 
     static void isPanlandrome(String s){
         boolean pal = true;
@@ -15,8 +15,7 @@ public class TestHA {
             System.out.println(" is Not Palindrome");
     }
 
-    public static void main(String[] args) {
-        String s = "ab";
+    public static void main(String[] args) {        String s = "ab";
         isPanlandrome(s);
 
     }

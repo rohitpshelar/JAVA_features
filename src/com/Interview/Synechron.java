@@ -9,55 +9,21 @@ import java.util.stream.Collectors;
 public class Synechron {
 
 	public static void main(String[] args) {
-		List<Integer> l = new ArrayList<>();
-		l.add(2);
-		l.add(1);
-		l.add(3);
 
-		// for
-		for (int i = 0; i < l.size(); i++) {
-			for (int j = i + 1; j < l.size(); j++) {
-				Integer temp = l.get(i);
-				l.set(i, l.get(j));
-				l.set(j, temp);
+			List<String> list = new ArrayList<>();
+			list.add("A");
+
+			list.add("B");
+
+			list.add("C");
+
+			for(String element : list) {
+
+				list.remove(element);
+
 			}
-		}
 
-		for (Integer integer : l) {
-			System.out.println(integer);
-		}
-		
-		//Stream
-		  l.stream().collect(Collectors.collectingAndThen(Collectors.toList(),
-		              lst -> {
-		                  Collections.reverse(lst);
-		                  return lst.stream();
-		              }
-		          )).forEach(System.out::println);
-		  
-		  // return list object
-		  l = l.stream().collect(Collectors.collectingAndThen(Collectors.toList(),
-		          lst -> {
-		              Collections.reverse(lst);
-		              return lst.stream();
-		          }
-		      )).collect(Collectors.toList());
-		
-		  for (Integer integer : l) {
-			  System.out.println(integer);
-		  }
-		 
-		 //Iterator
-		System.out.println("Iterator");
-		 ListIterator<Integer> li = l.listIterator(l.size());
+			System.out.println(list.size());
 
-		// Iterate in reverse.
-		while(li.hasPrevious()) {
-		  System.out.println(li.previous());
-		}
-		
-		while(li.hasPrevious()) {
-			  System.out.println(li.previous());
-			}
 	}
 }

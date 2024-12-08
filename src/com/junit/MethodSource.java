@@ -1,16 +1,14 @@
-package com.stream;
+package com.junit;
 
-import org.junit.jupiter.api.Test;
+import com.stream.TestCapcoFindProfitFromStock;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
-import org.junit.jupiter.params.provider.CsvSource;
-import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class TestCapcoTest {
+class MethodSource {
 
     public static Stream<Arguments> findProfitFromStock() {
         return Stream.of(
@@ -19,9 +17,9 @@ class TestCapcoTest {
     }
 
     @ParameterizedTest
-    @MethodSource
+    @org.junit.jupiter.params.provider.MethodSource
     void findProfitFromStock(int[] price, int expectedTotal) {
-        TestCapco testCapco = new TestCapco();
-        assertEquals(expectedTotal,testCapco.findProfitFromStock(price));
+        TestCapcoFindProfitFromStock testCapcoFindProfitFromStock = new TestCapcoFindProfitFromStock();
+        assertEquals(expectedTotal, testCapcoFindProfitFromStock.findProfitFromStock(price));
     }
 }

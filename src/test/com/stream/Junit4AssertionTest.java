@@ -1,8 +1,9 @@
-package com.JunitTest;
+package com.stream;
 
-import static org.junit.Assert.*;
 
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class Junit4AssertionTest {				
 
@@ -21,12 +22,12 @@ public class Junit4AssertionTest {
         int[] airethematicArrary2 = { 1, 2, 3 };					
         		
         //Assert statements		
-        assertEquals(string1,string2);					
-        assertSame(string3, string4);					
-        assertNotSame(string1, string3);					
-        assertNotNull(string1);			
-        assertNull(string5);			
-        assertTrue(variable1<variable2);					
+        assertEquals(string1, string2);
+        assertSame(string3, string4);
+        assertNotSame(string1, string3);
+        assertNotNull(string1);
+        assertNull(string5);
+        assertTrue(variable1<variable2);
         assertArrayEquals(airethematicArrary1, airethematicArrary2);					
     }		
 }

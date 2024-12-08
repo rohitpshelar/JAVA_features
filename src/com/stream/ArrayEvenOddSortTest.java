@@ -1,6 +1,6 @@
 package com.stream;
 
-public class ArrayTest {
+public class ArrayEvenOddSortTest {
 	public static void main(String[] args) {
 		int[] inta = { 2, 9, 6, 3, 4 };
 		

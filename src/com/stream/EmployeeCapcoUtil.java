@@ -1,6 +1,6 @@
 package com.stream;
 
-public class Employee{
+public class EmployeeCapcoUtil {
     int id;
     int age;
 
@@ -38,7 +38,7 @@ public class Employee{
 
     String name;
     int salary;
-    public Employee(int id,int age, String name, int salary) {
+    public EmployeeCapcoUtil(int id, int age, String name, int salary) {
         super();
         this.id = id;
         this.age = age;

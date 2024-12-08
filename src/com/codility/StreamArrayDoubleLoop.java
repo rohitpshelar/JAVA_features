@@ -1,40 +1,79 @@
 package com.codility;
 
+import ch.qos.logback.classic.spi.ILoggingEvent;
+import ch.qos.logback.core.read.ListAppender;
+import org.junit.jupiter.api.Test;
+import org.junit.platform.commons.logging.Logger;
+import org.junit.platform.commons.logging.LoggerFactory;
+
 import java.util.stream.IntStream;
 
 public class StreamArrayDoubleLoop {
-//	{2,5,6,9,8,7,10}
+	static final Logger LOGGER = LoggerFactory.getLogger(StreamArrayDoubleLoop.class);
+	//	{2,5,6,9,8,7,10}
+	//
+	//	sum = 12
+	//
+	//	[2,10]
+
+    public static void main(String[] args) {
+        int[] input = {2, 5, 6, 9, 8, 7, 10};
+        int sum = 12;
+
+        System.out.println("With Stream");
+        System.out.println("--------------");
+        withStream(input, sum);
+        System.out.println(" ");
+        System.out.println("With For Loop");
+        System.out.println("--------------");
+        withForLoop(input, sum);
+    }
+
+    private static void withStream(int[] inputArray, int sum) {
+        IntStream.range(0, inputArray.length).forEach(i -> IntStream.range(0, inputArray.length)
+                .filter(j -> inputArray[i] + inputArray[j] == sum).forEach(j -> System.out.println(inputArray[i] + "," + inputArray[j]))
+        );
+    }
+
+    private static void withForLoop(int[] inputArray, int sum) {
+		LOGGER.info(() -> "start");
+        for (int j = 0; j < inputArray.length; j++) {
+            for (int j2 = 0; j2 < inputArray.length; j2++) {
+                if (inputArray[j] + inputArray[j2] == sum) {
+                    System.out.println(inputArray[j] + "," + inputArray[j2]);
+                }
+            }
+        }
+    }
+
+
+//	@Test
+//	void doThat() throws Exception {
+//		// get Logback Logger
+//		Logger fooLogger = LoggerFactory.getLogger(StreamArrayDoubleLoop.class);
 //
-//	sum = 12
+//		// create and start a ListAppender
+//		ListAppender<ILoggingEvent> listAppender = new ListAppender<>();
+//		listAppender.start();
 //
-//	[2,10]
-
-	public static void main(String[] args) {
-		int[] input = { 2, 5, 6, 9, 8, 7, 10 };
-		int sum = 12;
-		IntStream.range(0, input.length).forEach(i -> IntStream.range(0, input.length)
-				.filter(j -> i != j && input[i] + input[j] == sum).forEach(j -> addPairs(input[i], input[j]))
-				);
-
-	}
-
-	private static Object addPairs(int i, int j) {
-		System.out.println(i + " " + j);
-		return i + j;
-	}
-
-	private void m1(int[] i) {
-
-		for (int j = 0; j < i.length; j++) {
-			for (int j2 = 0; j2 < i.length; j2++) {
-				if (i[j] + i[j2] == 12) {
-					System.out.println(i[j] + "," + i[j2]);
-				}
-			}
-		}
-
-		IntStream.of(i).sorted().map(e -> e).forEach(System.out::println);
-
-	}
-
+//		// add the appender to the logger
+//		// addAppender is outdated now
+//		fooLogger.addAppender(listAppender);
+//
+//		// call method under test
+//		Foo foo = new Foo();
+//		foo.doThat();
+//
+//		// JUnit assertions
+//		List<ILoggingEvent> logsList = listAppender.list;
+//		assertEquals("start", logsList.get(0)
+//				.getMessage());
+//		assertEquals(Level.INFO, logsList.get(0)
+//				.getLevel());
+//
+//		assertEquals("finish", logsList.get(1)
+//				.getMessage());
+//		assertEquals(Level.INFO, logsList.get(1)
+//				.getLevel());
+//	}
 }

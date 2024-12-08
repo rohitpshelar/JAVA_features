@@ -37,7 +37,7 @@ public class FindPalindromesFromString {
         }
     }
 
-    List<String> filterNewWay(String a, int i){
+    public List<String> filterNewWay(String a, int i){
         newWay(a);
        return  new HashSet<>(l).stream().filter(s-> s.length() == i).toList();
 

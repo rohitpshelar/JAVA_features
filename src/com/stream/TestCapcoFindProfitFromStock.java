@@ -1,6 +1,6 @@
 package com.stream;
 
-public class TestCapco {
+public class TestCapcoFindProfitFromStock {
 //    public static void main(String[] args) {
 //        List<Employee> empList = new ArrayList<>();
 //        empList.add(new Employee(1,24, "Sumit", 1000));
@@ -29,12 +29,12 @@ public class TestCapco {
 //    Then buy on day 7 (price = 1) and sell on day 8 (price = 4), profit = 4-1 = 3.
 
     public static void main(String[] args) {
-        TestCapco t = new TestCapco();
+        TestCapcoFindProfitFromStock t = new TestCapcoFindProfitFromStock();
         int[] prices = {3,3,5,0,0,3,1,4};
         t.findProfitFromStock(prices);
     }
 
-    int findProfitFromStock( int[] prices){
+    public int findProfitFromStock(int[] prices){
         int s = 0;
         int buy = 0;
         int buyDay = 0;
