@@ -1,16 +1,6 @@
 package com.stream;
 
 public class TestCapcoFindProfitFromStock {
-//    public static void main(String[] args) {
-//        List<Employee> empList = new ArrayList<>();
-//        empList.add(new Employee(1,24, "Sumit", 1000));
-//        empList.add(new Employee(2,22, "Sahil", 2000));
-//        empList.add(new Employee(3,24, "Sathya", 4000));
-//        empList.add(new Employee(4,22, "Kishore", 1000));
-//        empList.add(new Employee(5,20, "Sunny", 2000));
-//
-//        var a = empList.stream().collect(Collectors.groupingBy(Employee::getAge));
-//    }
 
 //    You are given an array prices where prices[i] is the price of a given stock on the ith day.
 //
