@@ -34,10 +34,11 @@ public class CodeTest {
      */
 
     public static boolean hasDuplicate(List<String> words) {
-        return words.size() != words.stream().collect(Collectors.toSet()).size();
+        return words.size() != new HashSet<>(words).size();
     }
     /**
-
++
+     
      * Counts the frequencies of the given list of words.
 
      *
@@ -61,13 +62,15 @@ public class CodeTest {
     public static Map<String, Integer> countFrequencies(List<String> words) {
         Map<String, Integer> re = new HashMap<>();
 
-        for (int i = 0; i < words.size(); i++) {
-            if (re.containsKey(words.get(i))){
-                re.put(words.get(i), re.get(words.get(i)) +1);
-            }else {
-                re.put(words.get(i), 1);
-            }
-        }
+        re = words.stream().collect(Collectors.toMap(i->i, i->1, Integer::sum));
+//
+//        for (int i = 0; i < words.size(); i++) {
+//            if (re.containsKey(words.get(i))){
+//                re.put(words.get(i), re.get(words.get(i)) +1);
+//            }else {
+//                re.put(words.get(i), 1);
+//            }
+//        }
         return  re;
 
     }

@@ -1,5 +1,9 @@
 package com.stream;
 
+import java.util.HashSet;
+import java.util.Set;
+import java.util.stream.IntStream;
+
 public class TestCapcoFindProfitFromStock {
 
 //    You are given an array prices where prices[i] is the price of a given stock on the ith day.
@@ -21,7 +25,17 @@ public class TestCapcoFindProfitFromStock {
     public static void main(String[] args) {
         TestCapcoFindProfitFromStock t = new TestCapcoFindProfitFromStock();
         int[] prices = {3,3,5,0,0,3,1,4};
-        t.findProfitFromStock(prices);
+//IntStream.of(prices).forEach(System.out::println);
+        System.out.println(t.firstDuplicate(prices));
+//        t.findProfitFromStock(prices);
+    }
+
+    public int firstDuplicate(int[] arr) {
+        Set<Integer> seen = new HashSet<>();
+        return IntStream.of(arr)
+                .filter(x -> !seen.add(x))   // add returns false for duplicates
+                .findFirst()                 // first duplicate (second occurrence earliest)
+                .orElse(-1);                 // return -1 if none
     }
 
     public int findProfitFromStock(int[] prices){

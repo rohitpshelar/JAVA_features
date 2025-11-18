@@ -1,7 +1,12 @@
 package com.stream;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.concurrent.ForkJoinPool;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class StreamTest {
 //    private static final  Logger logger = Logger.getLogger(StreamTest.class.getName());
@@ -31,10 +36,12 @@ public class StreamTest {
 //            Stream<Integer> infiniteStream = Stream.iterate(1, i -> i + 1);
 //            int sum = infiniteStream.filter(i -> i % 2 == 0)
 //                    .limit(5)
-//                    .reduce(0, (a, b) -> a + b);
+//                   // .sum(); // this is for primitives like IntStream, LongStream, or DoubleStream and not  Stream<Integer>
+//                    .reduce(0, Integer::sum);
+//
 //            System.out.println(sum);
 //        }
-//    }
+
 //    What will be the output of the above code?
 //    a) 0
 //    b) 6
@@ -54,10 +61,15 @@ public class StreamTest {
 //                            StringBuilder::append,
 //                            StringBuilder::toString
 //                    ));
-//
 //            System.out.println(result);
+//
+////            OR
+//
+//            String result2 = String.join(" ", words);
+//            System.out.println(result2);
+//
 //        }
-//    }
+
 //    What will be the output of the above code?
 //    a) apple, banana, cherry, date
 //    b) apple banana cherry date -----------------------------
@@ -66,12 +78,34 @@ public class StreamTest {
 
 //    Q4.
 //    
-//        public static void main(String[] args) {
-//            List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
-//            int result = numbers.parallelStream()
-//                    .reduce(1, (a, b) -> a * b);
-//            System.out.println(result);
-//        }
+        public static void main(String[] args) {
+        // Parallel Stream
+            List<Integer> numbers = Arrays.asList(1,5 );
+            int result = numbers.parallelStream()
+                    .reduce(3, (a, b) -> a * b);
+            System.out.println(result); // Output: 243
+// OR
+            int result2 = 1;
+            for(int i=0;i<numbers.size();i++){
+                result2 = (numbers.get(i) * 3) * result2;
+            }
+            System.out.println(result2); // Output: 243
+//--------------------------------------------------------------------------
+        // Sequential Stream
+            int result4 = numbers.stream()
+                    .reduce(3, (a, b) -> a * b);
+            System.out.println(result4);
+// OR
+            int result5 = 1;
+            for (Integer number : numbers) {
+                result5 = number * result5;
+            }
+            result5 = 3 * result5;
+            System.out.println(result5);
+
+
+
+        }
 //    }
 //    What will be the output of the above code?
 //    a) 120 ------------------------------------------------------

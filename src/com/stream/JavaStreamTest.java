@@ -39,102 +39,62 @@ import java.util.stream.Stream;
 public class JavaStreamTest {
 	public static void main(String[] args) {
 		
-		//Integer
-		IntStream.range(1, 10).filter(e -> e%2==0).skip(1).forEach(e->System.out.print(e+","));
-		System.out.println("=1=");
+		System.out.println("\n--Sum of All number in list--");
 		System.out.println(IntStream.range(1, 10).sum());
-		System.out.println("=2=");
-		IntStream.range(1, 1000).filter(e -> e%3==0).filter(e -> e%5==0).filter(e -> e%10!=0).forEach(e -> System.out.print(e+","));
-				
-		//String
-		System.out.println("=3=");
-		System.out.println(Stream.of("Rohit","Shelar","AA").sorted().count());
+
+		System.out.println("\n--Count of List Data--");
+		System.out.println(Stream.of("Rohit","Shelar","AA").count());
 		
-		System.out.println("=4=");
+		System.out.println("\n--Sort and Print First data--");
 		Stream.of("Rohit","Shelar","AA").sorted().findFirst().ifPresent(System.out::println);
 		
-		System.out.println("=5=");
+		System.out.println("\n--Print Word Stars with 'S'--");
 		String[] names = {"Rohit","Shelar","AA"};
 		Arrays.stream(names).filter(e->e.startsWith("S")).forEach(System.out::println);
 		 
-		System.out.println("=6=");
-		Arrays.stream(new int[] {2,1,6,3}).map(e->e*e).average().ifPresent(System.out::println);
-		
-		System.out.println("=7=");
+		System.out.println("\n--Average of numbers--");
+		Arrays.stream(new int[] {2,1,6,3}).map(e->e*e).forEach(System.out::print);
+        System.out.println("\n--Average of squares--");
+        Arrays.stream(new int[] {2,1,6,3}).map(e->e*e).average().ifPresent(System.out::print);
+        System.out.println(" string");
+        System.out.println(Arrays.stream(new int[]{2, 1, 6, 3})
+                .map(e -> e * e)
+                .mapToObj(String::valueOf)
+                .collect(Collectors.joining(",")));
+
+		System.out.println("\n--Camel Case--");
 		List<String> pnames= Arrays.asList("Rohit","Shelar","AA","anna");
 		pnames.stream().map(String::toLowerCase).filter(e->e.startsWith("a")).map(x -> x.substring(0, 1).toUpperCase() + x.substring(1).toLowerCase()).forEach(e -> System.out.print(e+","));
 		
-		System.out.println("=8=");
+		System.out.println("\n--List Reverse Types--");
 			//types of reverse List
+        System.out.println("\n--Orig--");
 			List<Integer> list = new ArrayList<Integer>(Arrays.asList(1, 3, 3, 7, 5));
-			list.stream().forEach(System.out::println); // 1 3 3 7 5
-	
-			int size = list.size();
-	
-			ListIterator<Integer> it = list.listIterator(size);
+        list.forEach(System.out::print); // 1 3 3 7 5
+
+        int size = list.size();
+
+        System.out.println("\n--Using Iterator--");
+        ListIterator<Integer> it = list.listIterator(size);
 			Stream.generate(it::previous).limit(size)
-			    .forEach(System.out::println); // 5 7 3 3 1
-	
-			ListIterator<Integer> it2 = list.listIterator(size);
-			Stream.iterate(it2.previous(), i -> it2.previous()).limit(size)
-			    .forEach(System.out::println); // 5 7 3 3 1
-	
-			// If list is RandomAccess (i.e. an ArrayList)
-			IntStream.range(0, size).map(i -> size - i - 1).map(list::get)
-			    .forEach(System.out::println); // 5 7 3 3 1
-	
-			// If list is RandomAccess (i.e. an ArrayList), less efficient due to sorting
-			IntStream.range(0, size).boxed().sorted(Comparator.reverseOrder())
-			    .map(list::get).forEach(System.out::println); // 5 7 3 3 1
-			
-			// return list object
-			list = list.stream().collect(Collectors.collectingAndThen(Collectors.toList(),
-	                  lst -> {
-	                      Collections.reverse(lst);
-	                      return lst.stream();
-	                  }
-	              )).collect(Collectors.toList());
+			    .forEach(System.out::print); // 5 7 3 3 1
 
-			for (Integer integer : list) {
-				System.out.println(integer);
-			}
-			
-			
-			getSpecificElement();
-	}
-	
-	private static void getSpecificElement() {
-		
-		List<emp> empList = new ArrayList<emp>();
-		empList.add(new emp(1, "Rohit", 90000));
-		empList.add(new emp(2, "Don", 1000));
-		empList.add(new emp(3, "Samit", 110000));
-		empList.add(new emp(4, "Janu", 50000));
-		
-		empList.stream().sorted(Comparator.reverseOrder()).skip(2).limit(1).forEach(e -> System.out.println(e.name));
-	}
-	
-	
+        System.out.println("\n--Using map--");
+        IntStream.range(0, list.size()).mapToObj(i -> list.get(list.size() - 1 - i)).forEach(System.out::print);
 
-}
+        System.out.println("\n--Using Comparator.reverseOrder--");
+        list.stream().sorted(Comparator.reverseOrder()).forEach(System.out::print);
 
-class emp implements Comparable<emp> {
-	Integer id;
-	String name;
-	Integer salary;
-	public emp(Integer id, String name, Integer salary) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.salary = salary;
-	}
-	@Override
-	public int compareTo(emp o) {
-		return this.salary.compareTo(o.salary);
-	}
-	
-	
-	
-	
+        System.out.println("\n--Using Collectors.collectingAndThen--");
+        list.stream().collect(Collectors.collectingAndThen(Collectors.toList(), l -> {
+                    Collections.reverse(l);
+                    return l;
+                })).forEach(System.out::print);
+
+        System.out.println("\n--Using Collections.reverse--");
+        Collections.reverse(list);                  // reverse in-place
+        list.forEach(System.out::print);
+
+    }
 	
 }
